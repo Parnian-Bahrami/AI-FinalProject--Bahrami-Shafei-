@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Data (Ignore large CSV files but keep the folder structure)
+data/raw/*.csv
+data/processed/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Models (Ignore heavy model weights)
+models/*.bin
+models/*.pt
+models/*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Results
+results/metrics/*.txt
+results/charts/*.png
