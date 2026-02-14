@@ -47,13 +47,13 @@ class TextPreprocessor:
 # --- اجرای نمونه جهت تست ---
 if __name__ == "__main__":
     # مسیر دیتاست را بر اساس ساختار درختی تنظیم کنید
-    df = pd.read_csv('../../data/raw/Bitext_Sample_Customer_Support_Training_Dataset_27K_responses-v11.csv')
+    df = pd.read_csv('../data/raw/Bitext_Sample_Customer_Support_Training_Dataset_27K_responses-v11.csv')
     
     preprocessor = TextPreprocessor()
     df_processed, encoder = preprocessor.process_dataframe(df)
     
     # ذخیره داده‌های پیش‌پردازش شده در پوشه مربوطه طبق ساختار درختی
-    os.makedirs('../../data/processed', exist_ok=True)
-    df_processed.to_csv('../../data/processed/cleaned_data.csv', index=False)
+    os.makedirs('../data/processed', exist_ok=True)
+    df_processed.to_csv('../data/processed/cleaned_data.csv', index=False)
     print("Processed data saved to data/processed/cleaned_data.csv")
     
