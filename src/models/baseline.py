@@ -40,12 +40,12 @@ def run_baseline_model(data_path):
     print(classification_report(y_test, y_pred, digits=4))
 
     # 6. ذخیره مدل در پوشه models (طبق ساختار درختی)
-    os.makedirs('../../models', exist_ok=True)
-    joblib.dump(model, '../../models/baseline_model.pkl')
-    joblib.dump(vectorizer, '../../models/tfidf_vectorizer.pkl')
+    os.makedirs('../models', exist_ok=True)
+    joblib.dump(model, '../models/baseline_model.pkl')
+    joblib.dump(vectorizer, '../models/tfidf_vectorizer.pkl')
     print("Model saved to models/baseline_model.pkl")
 
 if __name__ == "__main__":
     # مسیر داده‌های تمیز شده
-    run_baseline_model('../../data/processed/cleaned_data.csv')
+    run_baseline_model('../data/processed/cleaned_data.csv')
     

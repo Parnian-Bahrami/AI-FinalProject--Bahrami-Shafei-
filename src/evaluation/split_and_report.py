@@ -30,17 +30,17 @@ def create_experiment_plan(data_path):
     }
     
     # ۴. ذخیره گزارش در پوشه results/metrics طبق ساختار درختی
-    os.makedirs('../../results/metrics', exist_ok=True)
-    with open('../../results/metrics/experiment_summary.txt', 'w', encoding='utf-8') as f:
+    os.makedirs('../results/metrics', exist_ok=True)
+    with open('../results/metrics/experiment_summary.txt', 'w', encoding='utf-8') as f:
         f.write("=== Experiment Plan Summary ===\n")
         for key, value in stats.items():
             f.write(f"{key}: {value}\n")
             print(f"{key}: {value}")
             
     # ۵. ذخیره مجموعه‌ها برای فاز دوم (اختیاری اما حرفه‌ای)
-    train_df.to_csv('../../data/processed/train.csv', index=False)
-    val_df.to_csv('../../data/processed/val.csv', index=False)
-    test_df.to_csv('../../data/processed/test.csv', index=False)
+    train_df.to_csv('../data/processed/train.csv', index=False)
+    val_df.to_csv('../data/processed/val.csv', index=False)
+    test_df.to_csv('../data/processed/test.csv', index=False)
     
     print("\n✅ گزارش تقسیم‌بندی داده‌ها با موفقیت در پوشه results ذخیره شد.")
 
